@@ -1,13 +1,13 @@
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   "use strict";
 
   //Contact
-  $('form.registrationForm').submit(function() {
+  $('form.registrationForm').submit(function () {
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
-    f.children('input').each(function() { // run all inputs
+    f.children('input').each(function () { // run all inputs
 
       var i = $(this); // current input
       var rule = i.attr('data-rule');
@@ -57,7 +57,7 @@ jQuery(document).ready(function($) {
         i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
-    f.children('textarea').each(function() { // run all inputs
+    f.children('textarea').each(function () { // run all inputs
 
       var i = $(this); // current input
       var rule = i.attr('data-rule');
@@ -89,13 +89,13 @@ jQuery(document).ready(function($) {
       }
     });
     // Prepare data for Google Form submission
-    
+
     var formData = $(this).serialize();
     // console.log(formData)
-    var googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSe8bOXNhBW9OK48RnnW7qXzfyw1XWgCbbZWohZQgTas4ybdlA/viewform?usp=publish-editor"; // Replace with your Google Form URL
+    var googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSe8bOXNhBW9OK48RnnW7qXzfyw1XWgCbbZWohZQgTas4ybdlA/formResponse"; // Updated to formResponse endpoint
     const container = document.getElementById("registerContainer");
     const iframe = document.createElement("iframe");
-    iframe.src = googleFormURL+formData + "&submit=Submit";
+    iframe.src = googleFormURL + "?" + formData + "&submit=Submit";
     iframe.name = "register-iframe";
     iframe.id = "register-iframe";
     iframe.style = "display:none;";
