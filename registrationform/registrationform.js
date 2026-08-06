@@ -88,6 +88,9 @@ jQuery(document).ready(function ($) {
         i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
+
+    if (ferror) return false;
+
     // Prepare data for Google Form submission
 
     var formData = $(this).serialize();
@@ -102,7 +105,6 @@ jQuery(document).ready(function ($) {
     container.innerHTML = "";
     container.appendChild(iframe);
 
-
     var response = document.getElementById('register-iframe');
     if (response) {
       $("#sendregistration").addClass("show");
@@ -114,9 +116,7 @@ jQuery(document).ready(function ($) {
       $('#errorregistration').html("There was an error submitting the form. Please try again.");
     }
 
-
-
-
+    // Prevent default form submission (already prevented by returning false later)
     return false;
   });
 
