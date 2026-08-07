@@ -32,6 +32,33 @@
   <link href="lib/leaflet/leaflet.css" rel="stylesheet">
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <style>
+    .bank-details {
+      border: 2px solid #f2cdcd;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #ffffff;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      /* added spacing below the box */
+    }
+
+    .bank-details p {
+      margin: 0;
+      line-height: 1.7;
+      font-weight: normal;
+      /* ensure normal weight */
+    }
+
+    .bank-details p strong {
+      font-weight: bold;
+      /* only names bold */
+    }
+
+    .bank-details h5 {
+      margin: 0;
+    }
+  </style>
 
 </head>
 
@@ -88,10 +115,16 @@
   <section id="intro">
     <div class="intro-container wow fadeIn">
       <img src="media/logo.png" alt="title" class="img-fluid" style="width: 40%; height: auto;">
-      <h2 style="color: #fff; font-weight: bold; font-size: 1.6rem;">
-        D3Mat: Workshop on Computational Materials Modelling and Atomistic Simulations
-        <br>September 25, 2026, PSG Institute of Advanced Studies
+      <h2 style="color: #fff; font-weight: bold; font-size: 2.3rem;">
+        First D<sup>3</sup>Mat Workshop on <br>
+        Computational Materials Modelling and Atomistic Simulations
+        <br>
       </h2>
+      <h3 style="color: #fb555e; font-weight: bold; font-size: 1.6rem;">September 25, 2026</h3>
+      <h3 style="color: #fafafa; font-weight: bold; font-size: 1.6rem;">PSG Institute of Advanced Studies,
+        <br>Coimbatore
+      </h3>
+
     </div>
   </section>
 
@@ -110,7 +143,7 @@
           <!-- LEFT PANEL: About the Conference -->
           <div class="col-12">
             <h3>About the Workshop</h3>
-            <p style="text-align: justify;">
+            <p style="text-align: justify; font-size: 1.0rem;">
               This workshop introduces beginners to the fundamentals of Density Functional Theory (DFT), one of the most
               widely used computational methods for studying the electronic, structural, and optical properties of
               materials. Through lectures, tutorials, and hands-on sessions, participants will explore the basic
@@ -122,7 +155,7 @@
             </p>
 
             <h3>Where</h3>
-            <p>
+            <p style="font-size: 1.0rem;">
               On-site and online event <br>
               PSG Institute of Advanced Studies, Coimbatore
             </p>
@@ -136,7 +169,7 @@
           <div class="col-12">
 
             <h3>Sessions Overview</h3>
-            <p style="margin-bottom: 5px;">
+            <p style="margin-bottom: 5px; font-size: 1.0rem;">
               This workshop includes interactive formats designed to foster discussions and collaboration:
             </p>
             <ul>
@@ -161,9 +194,9 @@
         <div class="section-header">
           <h2>Invited Speakers</h2>
         </div>
-        <p style="margin-bottom: 5px;">
-          Coming Soon
-        </p>
+        <h5 class="text-center">
+          Details Coming Soon!
+        </h5>
         <!--
         <div class="row" style="align-items: flex-start;">
           <div class="col-lg-3 col-md-3">
@@ -219,8 +252,11 @@
         <div class="section-header">
           <h2>Workshop Schedule</h2>
         </div>
+        <h5 class="text-center">
+          Details Coming Soon!
+        </h5>
 
-        <div class="schedule-legend">
+        <!--<div class="schedule-legend">
           <span class="legend-item"><span class="legend-swatch type-talk"></span>Talk</span>
           <span class="legend-item"><span class="legend-swatch type-handson"></span>Hands-on</span>
           <span class="legend-item"><span class="legend-swatch type-keynote"></span>Keynote / Opening</span>
@@ -230,7 +266,7 @@
         </div>
         <p class="text-center schedule-hint">Click a talk, keynote or hands-on session to view its details.</p>
 
-        <!-- Day 1 -->
+        <!-- Day 1 
         <div class="col-lg-9 mx-auto schedule-day">
           <div class="section-header">
             <h3 class="text-center">
@@ -350,7 +386,7 @@
     </section>-->
 
 
-    <!--==========================
+        <!--==========================
       Posters Section
     ============================
     <section id="posters" class="wow fadeInUp">
@@ -367,12 +403,12 @@
 
         <div class="row justify-content-center" id="posters-grid">
           <!-- poster cards are rendered here by js/posters.js-->
-    <!--</div>
+        <!--</div>
 
       </div>
     </section>-->
 
-    <!--==========================
+        <!--==========================
       Photos / Gallery Section
     ============================
     <section id="gallery" class="section-with-bg wow fadeInUp">
@@ -576,42 +612,43 @@
       </div>
     </section>-->
 
-    <!--==========================
+        <!--==========================
       Venue Section
     ============================-->
-    <section id="venue" class="wow fadeInUp">
+        <section id="venue" class="wow fadeInUp">
 
-      <div class="container-fluid">
+          <div class="container-fluid">
 
-        <div class="section-header">
-          <h2>Workshop Venue</h2>
-          <p>The workshop takes place in the PSG Institute of Advanced Studies, Peelamdeu, Coimbatore campus</p>
-        </div>
+            <div class="section-header">
+              <h2>Workshop Venue</h2>
+              <p>The workshop takes place in the PSG Institute of Advanced Studies, Peelamdeu, Coimbatore campus</p>
+            </div>
 
-        <!-- PSGTech Campus -->
-        <div class="row no-gutters">
-          <div class="col-lg-6 venue-map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5223.477758852038!2d76.99933017529428!3d11.025215126705486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8582f09cdb78b%3A0x7332ad3b2c6c1118!2sPSG%20Institute%20of%20Advanced%20Studies!5e0!3m2!1sen!2sin!4v1784804954095!5m2!1sen!2sin"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+            <!-- PSGTech Campus -->
+            <div class="row no-gutters">
+              <div class="col-lg-6 venue-map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5223.477758852038!2d76.99933017529428!3d11.025215126705486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8582f09cdb78b%3A0x7332ad3b2c6c1118!2sPSG%20Institute%20of%20Advanced%20Studies!5e0!3m2!1sen!2sin!4v1784804954095!5m2!1sen!2sin"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
 
-          <div class="col-lg-6 venue-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8">
-                <h3>PSG Tech Campus</h3>
-                <p><strong>Day 1 &amp; Day 2</strong><br>
-                  Avinashi Rd, Peelamedu<br>
-                  Coimbatore,India
-                </p>
-                <p class="venue-rooms"><strong>Room:</strong> Digital Lab, I&nbsp;-&nbsp;Block (talks &amp; breaks)</p>
+              <div class="col-lg-6 venue-info">
+                <div class="row justify-content-center">
+                  <div class="col-11 col-lg-8">
+                    <h3>PSG Tech Campus</h3>
+                    <p><strong>Day 1 &amp; Day 2</strong><br>
+                      Avinashi Rd, Peelamedu<br>
+                      Coimbatore,India
+                    </p>
+                    <p class="venue-rooms"><strong>Room:</strong> Digital Lab, I&nbsp;-&nbsp;Block (talks &amp; breaks)
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- Campus Belval 
+            <!-- Campus Belval 
         <div class="row no-gutters mt-4">
           <div class="col-lg-6 venue-map">
             <iframe
@@ -645,9 +682,9 @@
 
     </section>-->
 
-        <!--==========================
+            <!--==========================
       Getting Around & Lunch Section
-    ============================-->
+    ============================
         <section id="getting-around" class="wow fadeInUp">
 
           <div class="container">
@@ -655,9 +692,9 @@
             <div class="section-header">
               <h2>Getting Around</h2>
               <p>Where to eat near the campus, and how to reach from Railway station/Gandhipuram/Airport</p>
-            </div>
+            </div>-->
 
-            <!-- Legend -->
+            <!-- Legend 
             <div class="row">
               <div class="col-12">
                 <div class="around-legend">
@@ -668,9 +705,9 @@
                   <span class="legend-note">Click a marker for details.</span>
                 </div>
               </div>
-            </div>
+            </div>-->
 
-            <!-- Campus Limpertsberg -->
+            <!-- Campus Limpertsberg 
             <div class="row align-items-center mt-2">
               <div class="col-lg-7">
                 <div id="map-limpertsberg" class="around-map"></div>
@@ -680,11 +717,11 @@
                   <h3>Around Campus Limpertsberg</h3>
                   <p>Bâtiment des Sciences, 162a Av. de la Faiencerie, Luxembourg City.</p>
                   <ul id="list-limpertsberg" class="around-list">
-                    <!-- Populated from js/getting-around.js -->
+                    <!-- Populated from js/getting-around.js 
                   </ul>
                 </div>
               </div>
-            </div>
+            </div>-->
 
             <!-- Campus Belval
         <div class="row align-items-center mt-4">
@@ -703,7 +740,7 @@
         </div>
         -->
 
-            <!-- Transfer guide -->
+            <!-- Transfer guide 
             <div class="row mt-4">
               <div class="col-12">
                 <div class="transfer-guide">
@@ -744,9 +781,9 @@
 
           </div>
 
-        </section>
+        </section>-->
 
-        <!--==========================
+            <!--==========================
       Hotels Section
     ============================
     <section id="hotels" class="section-with-bg wow fadeInUp">
@@ -855,17 +892,18 @@
 
     </section>-->
 
-        <!--==========================
+            <!--==========================
       Sponsors Section
     ============================-->
-        <section id="sponsors" class="wow fadeInUp">
+            <section id="sponsors" class="wow fadeInUp">
 
-          <div class="container">
-            <div class="section-header">
-              <h2>Sponsors</h2>
-            </div>
+              <div class="container">
+                <div class="section-header">
+                  <h2>Sponsors</h2>
+                </div>
+                <h5 class="text-center">Contact for sponsoring this event</h5>
 
-            <!--<div class="row no-gutters sponsors-wrap clearfix">
+                <!--<div class="row no-gutters sponsors-wrap clearfix">
 
           <div class="col-lg-3 col-md-6">
             <div class="sponsor-logo">
@@ -931,140 +969,150 @@
     </section>-->
 
 
-            <!--==========================
+                <!--==========================
       Registration + Abstract Submission (side-by-side)
     ============================-->
-            <section class="section-with-bg wow fadeInUp">
-              <div class="container">
-                <div class="row">
+                <section class="section-with-bg wow fadeInUp">
+                  <div class="container">
+                    <div class="row">
 
-                  <!-- Registration -->
-                  <div class="col-12" id="registration">
-                    <div class="p-3 p-md-4 p-xl-5">
-                      <div class="section-header">
-                        <h2>Registration</h2>
-                      </div>
-                      <h3 class="fs-6 fw-normal text-secondary mb-4" style="color:red;">
-                        <!--Registration is now closed.-->
-                      </h3>
-                      <h6 class="fs-6 fw-normal text-secondary mb-4" style="color:rgb(69, 24, 153);">
-                        <p><b>Registration Fee:<b> <a href="https://icmaddoc.tnsou.ac.in/icmaddoc/regfee.php">Click
-                                here to pay</a>
-                        </p>
-                        <p>In-person participants - Rs. 750 for students and Rs. 1000 for faculties.
-                        </p>
-                        <p>Online participants - Rs. 500.</p>
-                      </h6>
-                      <h6 style="color:rgb(69, 24, 153);">*Registration fee is non-refundable.</h6>
-
-                      <div class="form">
-                        <div id="sendregistration">Your have been succesfully registered. Thank you!
-                          Your registration is automatically noted, no email to follow.
-                        </div>
-                        <div id="errorregistration"></div>
-                        <!-- Registration closed: form disabled-->
-                        <form role="form" class="registrationForm" id="registration-form">
-                          <div class="row gy-3 gy-md-4 overflow-hidden">
-                            <div class="form-group col-2">
-                              <label for="entry.752432897" class="form-label">Title <span
-                                  class="text-danger">*</span></label><br>
-                              <select class="form-select" aria-label="Default select example" id="entry.752432897"
-                                name="entry.752432897">
-                                <option selected>--</option>
-                                <option value="Dr.">Dr.</option>
-                                <option value="Prof.">Prof.</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-lg-5">
-                              <label for="entry.988723086" class="form-label">First Name <span
-                                  class="text-danger">*</span></label>
-                              <input type="text" class="form-control" name="entry.988723086" id="entry.988723086"
-                                placeholder="First Name">
-                            </div>
-                            <div class="form-group col-lg-5">
-                              <label for="entry.2073420404" class="form-label">Last Name <span
-                                  class="text-danger">*</span></label>
-                              <input type="text" class="form-control" name="entry.2073420404" id="entry.2073420404"
-                                placeholder="Last Name">
-                            </div>
-                            <div class="form-group col-2">
-                              <label for="entry.1546356716" class="form-label">Attendance <span
-                                  class="text-danger">*</span></label><br>
-                              <select class="form-select" aria-label="Default select example" id="entry.1546356716"
-                                name="entry.1546356716">
-                                <option selected value="In person">In person</option>
-                                <option value="Online">Online</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-lg-6">
-                              <label for="entry.479916805" class="form-label">Email <span
-                                  class="text-danger">*</span></label>
-                              <input type="email" class="form-control" name="entry.479916805" id="entry.479916805"
-                                placeholder="name@example.com">
-                            </div>
-                            <div class="form-group col-12">
-                              <label for="entry.1867539047" class="form-label">Affiliation <span
-                                  class="text-danger">*</span></label>
-                              <input type="text" class="form-control" name="entry.1867539047" id="entry.1867539047"
-                                value="">
-                            </div>
-                            <div class="form-group col-12">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="No" name="entry.2068254453"
-                                  id="entry.2068254453" onclick="this.value = this.checked ? 'Yes' : 'No'">
-                                <label class="form-check-label" for="entry.2068254453">
-                                  I have paid the Registration Fee
-                                </label>
-                              </div>
-                            </div>
-                            <div class="form-group col-lg-6">
-                              <label for="entry.1647878990" class="form-label">Transaction ID<span
-                                  class="text-danger">*</span></label>
-                              <input type="text" class="form-control" name="entry.1647878990" id="entry.1647878990"
-                                value="">
-                            </div>
-                            <div class="form-group col-12">
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" name="iAgree" id="iAgreeReg">
-                                <label class="form-check-label text-secondary" for="iAgreeReg">
-                                  I agree to the <a href="#" data-toggle="modal" data-target="#modal-terms"
-                                    class="link-primary text-decoration-none">terms and conditions</a>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="form-group col-12">
-                              <br>
-                              <div class="d-grid">
-                                <button class="btn bsb-btn-xl btn-primary" type="submit">Sign up</button>
-                              </div>
-                            </div>
+                      <!-- Registration -->
+                      <div class="col-12" id="registration">
+                        <div class="p-3 p-md-4 p-xl-5">
+                          <div class="section-header">
+                            <h2>Registration</h2>
                           </div>
-                        </form>
+                          <h3 class="fs-6 fw-normal text-secondary mb-4" style="color:red;">
+                            <!--Registration is now closed.-->
+                          </h3>
 
+                          <div class="bank-details">
+                            <h5 style="color:rgb(153, 24, 24);"><strong>Registration Fee</strong></h5>
+                            <p><strong>In-person participants:</strong> Rs. 750 for students and Rs. 1000 for faculties.
+                            </p>
+                            <p><strong>Online participants:</strong> Rs. 500.</p>
+                            <h6 style="color:rgb(69, 24, 153);">*Registration fee is non-refundable.</h6>
+                          </div>
+
+                          <div class="bank-details">
+                            <h5 style="color:rgb(153, 24, 24);"><strong>Bank Account Details</strong></h5>
+                            <p><strong>Bank Name:</strong> Central Bank of India</p>
+                            <p><strong>Account Holder Name:</strong> PSG Institute of Advanced Studies</p>
+                            <p><strong>Branch:</strong> Peelamedu, Coimbatore</p>
+                            <p><strong>IFSC Code:</strong> CBIN0280913</p>
+                            <p><strong>Account Number:</strong> 1481412317</p>
+                          </div>
+
+                          <div class="form">
+                            <div id="sendregistration">Your have been succesfully registered for D3Mat workshop 2026.
+                              Thank
+                              you!
+                            </div>
+                            <div id="errorregistration"></div>
+                            <!-- Registration closed: form disabled-->
+                            <form role="form" class="registrationForm" id="registration-form">
+                              <div class="row gy-3 gy-md-4 overflow-hidden">
+                                <div class="form-group col-2">
+                                  <label for="entry.752432897" class="form-label">Title <span
+                                      class="text-danger">*</span></label><br>
+                                  <select class="form-select" aria-label="Default select example" id="entry.752432897"
+                                    name="entry.752432897">
+                                    <option selected>--</option>
+                                    <option value="Dr.">Dr.</option>
+                                    <option value="Prof.">Prof.</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-lg-5">
+                                  <label for="entry.988723086" class="form-label">First Name <span
+                                      class="text-danger">*</span></label>
+                                  <input type="text" class="form-control" name="entry.988723086" id="entry.988723086"
+                                    placeholder="First Name">
+                                </div>
+                                <div class="form-group col-lg-5">
+                                  <label for="entry.2073420404" class="form-label">Last Name <span
+                                      class="text-danger">*</span></label>
+                                  <input type="text" class="form-control" name="entry.2073420404" id="entry.2073420404"
+                                    placeholder="Last Name">
+                                </div>
+                                <div class="form-group col-2">
+                                  <label for="entry.1546356716" class="form-label">Attendance <span
+                                      class="text-danger">*</span></label><br>
+                                  <select class="form-select" aria-label="Default select example" id="entry.1546356716"
+                                    name="entry.1546356716">
+                                    <option selected value="In person">In person</option>
+                                    <option value="Online">Online</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                  <label for="entry.479916805" class="form-label">Email <span
+                                      class="text-danger">*</span></label>
+                                  <input type="email" class="form-control" name="entry.479916805" id="entry.479916805"
+                                    placeholder="name@example.com">
+                                </div>
+                                <div class="form-group col-12">
+                                  <label for="entry.1867539047" class="form-label">Affiliation <span
+                                      class="text-danger">*</span></label>
+                                  <input type="text" class="form-control" name="entry.1867539047" id="entry.1867539047"
+                                    value="">
+                                </div>
+                                <div class="form-group col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="No" name="entry.2068254453"
+                                      id="entry.2068254453" onclick="this.value = this.checked ? 'Yes' : 'No'">
+                                    <label class="form-check-label" for="entry.2068254453">
+                                      I have paid the Registration Fee
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                  <label for="entry.1647878990" class="form-label">Transaction ID<span
+                                      class="text-danger">*</span></label>
+                                  <input type="text" class="form-control" name="entry.1647878990" id="entry.1647878990"
+                                    value="">
+                                </div>
+                                <div class="form-group col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" name="iAgree"
+                                      id="iAgreeReg">
+                                    <label class="form-check-label text-secondary" for="iAgreeReg">
+                                      I agree to the <a href="#" data-toggle="modal" data-target="#modal-terms"
+                                        class="link-primary text-decoration-none">terms and conditions</a>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="form-group col-12">
+                                  <br>
+                                  <div class="d-grid">
+                                    <button class="btn bsb-btn-xl btn-primary" type="submit">Sign up</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+
+                          </div>
+                        </div>
                       </div>
+
                     </div>
                   </div>
+                  <div id="registerContainer"></div>
+                </section>
 
-                </div>
-              </div>
-              <div id="registerContainer"></div>
-            </section>
-
-            <!--==========================
+                <!--==========================
       Abstract Submission (white background)
     ============================
     <section class="wow fadeInUp">
       <div class="container">
         <div class="row">-->
 
-            <!-- Poster Abstract Submission 
+                <!-- Poster Abstract Submission 
           <div class="col-12" id="submit">
             <div class="p-3 p-md-4 p-xl-5">
               <div class="section-header">
                 <h2>Poster Abstract Submission</h2>
               </div>
               <h3 class="fs-6 fw-normal text-secondary mb-4" style="text-align: center;">-->
-            <!-- Submitted abstracts are final and cannot be modified.<br> 
+                <!-- Submitted abstracts are final and cannot be modified.<br> 
                 Poster abstract submission is now closed.<br>
                 For any inquiries, please contact <a
                   href="mailto:mlff.workshop@uni.lu">mlff.workshop@uni.lu</a>.
@@ -1072,7 +1120,7 @@
               <div class="form">
                 <div id="sendabstract">Your abstract has been successfully submitted. Thank you!</div>
                 <div id="errorabstract"></div>-->
-            <!-- Abstract submission closed: form disabled
+                <!-- Abstract submission closed: form disabled
                 <form role="form" class="abstractSubmitForm" id="abstract-submit-form">
                   <div class="row gy-3 gy-md-4 overflow-hidden">
                     <div class="form-group col-lg-5">
@@ -1130,9 +1178,9 @@
       <div id="abstractContainer"></div>
     </section>-->
 
-            <!--==========================
+                <!--==========================
   Our Team Section
-============================-->
+============================
             <section id="team" class="section-with-bg wow fadeInUp">
               <div class="container">
                 <div class="section-header">
@@ -1202,12 +1250,12 @@
 
                 </div>
               </div>
-            </section>
+            </section>-->
 
-            <!--==========================
+                <!--==========================
       Contact Section
     ============================-->
-            <!-- <section id="contact" class="wow fadeInUp">
+                <!-- <section id="contact" class="wow fadeInUp">
 
       <div class="container">
 
