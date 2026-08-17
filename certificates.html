@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Certificates — GPMLFF Workshop</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="media/favicon.png" rel="icon">
+  <link href="media/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800&display=swap" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <style>
+    .cert-main { padding: 120px 0 80px; min-height: 70vh; }
+    .cert-intro { max-width: 760px; margin: 0 auto 40px; text-align: center; color: #555; }
+    .cert-cards { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+    .cert-card { display: flex; align-items: center; gap: 18px; padding: 22px 24px;
+      border: 1px solid #e6e6ee; border-radius: 14px; background: #fff; text-decoration: none;
+      transition: box-shadow .15s, border-color .15s, transform .15s; }
+    .cert-card:hover { border-color: #1b2c5c; box-shadow: 0 8px 24px rgba(27,44,92,.10);
+      transform: translateY(-2px); }
+    .cert-card-icon { flex: 0 0 auto; width: 54px; height: 54px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center; font-size: 1.7rem;
+      background: #eef0f7; color: #1b2c5c; }
+    .cert-card.online .cert-card-icon { background: #f2ecf5; color: #6a3a7a; }
+    .cert-card-body { flex: 1 1 auto; display: flex; flex-direction: column; }
+    .cert-card-title { font-weight: 700; color: #1b2c5c; font-size: 1.12rem; }
+    .cert-card-sub { color: #666; font-size: .92rem; margin-top: 2px; }
+    .cert-card-count { color: #9a9aa8; font-size: .8rem; margin-top: 4px; }
+    .cert-card-dl { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px;
+      background: #1b2c5c; color: #fff; padding: 10px 18px; border-radius: 24px;
+      font-weight: 600; font-size: .9rem; white-space: nowrap; }
+    .cert-card.online .cert-card-dl { background: #6a3a7a; }
+    .cert-tip { max-width: 720px; margin: 26px auto 0; text-align: center; color: #99a; font-size: .86rem; }
+    @media (max-width: 560px) {
+      .cert-card { flex-wrap: wrap; }
+      .cert-card-dl { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body class="poster-page">
+
+  <header id="header" class="header-solid">
+    <div class="container">
+      <div id="logo" class="pull-left">
+        <a href="index.html#intro"><img src="media/title_1.png" alt="GPMLFF Workshop" title=""></a>
+      </div>
+      <nav class="poster-nav pull-right">
+        <a href="index.html#intro">Home</a>
+        <a href="certificates.html" class="active">Certificates</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cert-main">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="text-center">Certificates</h2>
+      </div>
+      <p class="cert-intro">
+        Certificates for the 1<sup>st</sup> General-Purpose Machine-Learned Force Fields
+        in Theory and Practice Workshop (13&ndash;15 July 2026). Download the document for
+        your category below and open it to find your own certificate &mdash; there is one
+        per page, ordered alphabetically by name.
+      </p>
+
+      <div class="cert-cards">
+        <a class="cert-card" href="certificates/GPMLFF_Attendance_Certificates.pdf" target="_blank" rel="noopener" download>
+          <span class="cert-card-icon"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
+          <span class="cert-card-body">
+            <span class="cert-card-title">Attendance</span>
+            <span class="cert-card-sub">For all in-person participants</span>
+            <span class="cert-card-count">50 certificates &middot; one per page</span>
+          </span>
+          <span class="cert-card-dl"><i class="fa fa-download" aria-hidden="true"></i> Download</span>
+        </a>
+        <a class="cert-card" href="certificates/GPMLFF_Poster_Certificates_in-person.pdf" target="_blank" rel="noopener" download>
+          <span class="cert-card-icon"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
+          <span class="cert-card-body">
+            <span class="cert-card-title">Poster presentation · in person</span>
+            <span class="cert-card-sub">For in-person poster presenters</span>
+            <span class="cert-card-count">17 certificates &middot; one per page</span>
+          </span>
+          <span class="cert-card-dl"><i class="fa fa-download" aria-hidden="true"></i> Download</span>
+        </a>
+        <a class="cert-card online" href="certificates/GPMLFF_Poster_Certificates_online.pdf" target="_blank" rel="noopener" download>
+          <span class="cert-card-icon"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
+          <span class="cert-card-body">
+            <span class="cert-card-title">Poster presentation · online</span>
+            <span class="cert-card-sub">For online poster presenters</span>
+            <span class="cert-card-count">5 certificates &middot; one per page</span>
+          </span>
+          <span class="cert-card-dl"><i class="fa fa-download" aria-hidden="true"></i> Download</span>
+        </a>
+      </div>
+
+      <p class="cert-tip">
+        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+        Tip: open the PDF and press <strong>Ctrl</strong>/<strong>&#8984; Cmd</strong> + <strong>F</strong>
+        to jump straight to your name.
+      </p>
+    </div>
+  </main>
+
+  <footer id="footer" class="poster-footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; <strong>GPMLFF Workshop</strong> &mdash; Universit&eacute; du Luxembourg, 2026
+      </div>
+    </div>
+  </footer>
+
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
