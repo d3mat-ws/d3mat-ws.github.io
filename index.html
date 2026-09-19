@@ -921,21 +921,46 @@
             </div>
             <div class="col-md-8">
               <h4>Prof. Dr. Ricardo Grau-Crespo</h4>
-              <h5>Queen Mary University of London, UK</h5>
-              <h6>Talk title: Symmetry-adapted configurational modelling of fractional site occupancy in solids</h6>
+              <h5>School of Engineering and Materials Science, <br>Queen Mary University of London, UK</h5>
+              <h6>Talk title: Modelling site-disordered solids beyond thermodynamics: DFT, statistical mechanics and
+                machine learning</h6>
               <h6>Abstract</h6>
-              <p align="justify">Site-Occupancy Disorder (SOD) is a computational approach for efficiently modelling
-                configurational disorder in crystalline materials. This talk will introduce the fundamentals of SOD,
-                focusing on the use of crystal symmetry to identify symmetry-equivalent atomic configurations and reduce
-                the computational effort required for disorder analysis. The concept of independent configurations,
-                configurational statistics, degeneracy, and reduced energy will be discussed. The talk will also provide
-                an overview of the SOD code and its applications in studying site disorder in materials with different
-                symmetries and supercell sizes.</p>
+              <p align="justify">This talk will present a perspective on the modelling of site disorder in crystalline
+                solids, with emphasis on approaches that go beyond simple energetic descriptions. I will first outline
+                the main methodological landscape for treating site disorder, from mean-field and cluster-expansion
+                strategies to explicit configurational and ensemble-based approaches. I will then focus on
+                symmetry-adapted ensemble models [1], which make it possible to combine statistical mechanics with
+                atomistic calculations such as DFT in order to predict not only configurational thermodynamics, but also
+                properties that are often difficult to capture with conventional cluster expansions, including cell
+                parameters, effective physical properties and average spectra (such as NMR [2, 3]). Examples will be
+                used to illustrate how ensemble models can provide a realistic description of disordered materials when
+                local geometry, long-range interactions, or property averaging are essential. Finally, I will discuss
+                recent work on generative AI for crystal structures through the CrystaLLM project [4], and a possible
+                route to address one of its current limitations: the treatment of site disorder. I will introduce the
+                idea of a crystal virtualiser that maps explicit ordered supercells back to virtual disordered
+                representations with fractional occupancies, enabling a posteriori correction of AI-generated crystal
+                structures.</p>
               <h6>References</h6>
               <ol class="small">
-                <li>R. Grau-Crespo, <em>J. Phys.: Condens. Matter</em> 2007, 19(25), 256201;
-                  <a href="https://doi.org/10.1088/0953-8984/19/25/256201" target="_blank"
-                    rel="noopener">doi.org/10.1088/0953-8984/19/25/256201</a>
+                <li>Site-Occupancy Disorder (SOD) repository:
+                  <a href="https://github.com/rgraucrespo/sod" target="_blank" rel="noopener">Repository of SOD code</a>
+                </li>
+                <li>R Grau-Crespo, S Hamad, SRG Balestra, R Issa, TD Sparks, A Fernandes, BL Griffiths, R Moran, D
+                  McKay, SE Ashbrook. <em>Capturing local compositional fluctuations in NMR modelling of solid
+                    solutions. </em> Chemical Science 16 (2025) 19357-19369;
+                  <a href="https://doi.org/10.1039/d5sc04550a" target="_blank"
+                    rel="noopener">doi.org/10.1039/d5sc04550a</a>
+                </li>
+                <li> RF Moran, D McKay, PC Tornstrom, A Aziz, A Fernandes, R Grau-Crespo, SE Ashbrook,
+                  <em> Ensemble-Based Modeling of the NMR Spectra of Solid Solutions: Cation Disorder in
+                    Y2(Sn,Ti)2O7,</em> Journal of the American Chemical Society 141 (2019) 17838-17846;
+                  <a href="https://doi.org/10.1021/jacs.9b09036" target="_blank"
+                    rel="noopener">doi.org/10.1021/jacs.9b09036</a>
+                </li>
+                <li>LM Antunes, KT Butler, R Grau-Crespo, <em>Crystal structure generation with autoregressive large
+                    language modeling,</em> Nature Communications 15 (2024) 10570;
+                  <a href="https://doi.org/10.1038/s41467-024-54639-7" target="_blank"
+                    rel="noopener">doi.org/10.1038/s41467-024-54639-7</a>
                 </li>
               </ol>
             </div>
@@ -974,9 +999,18 @@
                 materials.</p>
               </h6>
               <ol class="small">
-                <li>R. Grau-Crespo, <em>J. Phys.: Condens. Matter</em> 2007, 19(25), 256201;
+                <li>David Sholl, Janice A Steckel<em>Density Functional Theory: A Practical Introduction</em> 2009;
                   <a href="https://doi.org/10.1088/0953-8984/19/25/256201" target="_blank"
                     rel="noopener">doi.org/10.1088/0953-8984/19/25/256201</a>
+                </li>
+                <li>Richard M. Martin<em>Electronic Structure: Basic Theory and Practical Methods</em> 2009;
+                  <a href="https://doi.org/10.1088/0953-8984/19/25/256201" target="_blank"
+                    rel="noopener">doi.org/10.1088/0953-8984/19/25/256201</a>
+                </li>
+                <li>R.G. Parr and W. Yang<em>Density-functional theory of atoms and molecules.</em> Oxford University
+                  Press, New York, Oxford, 1989;
+                  <a href="https://doi.org/10.1002/qua.560470107" target="_blank"
+                    rel="noopener">doi.org/10.1002/qua.560470107</a>
                 </li>
               </ol>
             </div>
