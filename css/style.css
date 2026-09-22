@@ -1023,10 +1023,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #abstracts .abstracts-viewer {
-  max-width: 1500px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 8px;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.2);
   padding: 10px;
   overflow: hidden;
@@ -1052,7 +1053,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #abstracts .abstracts-fallback {
   font-size: 14px;
   color: #9195a2;
-  margin: 18px 0 24px 0;
+  margin: 18px 0 15px 0;
 }
 
 #abstracts .abstracts-fallback a {
