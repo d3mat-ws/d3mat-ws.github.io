@@ -1,51 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
-  <title>Certificates — GPMLFF Workshop</title>
+  <title>Certificates — D<sup>3</sup>Mat Workshop</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <link href="media/favicon.png" rel="icon">
+  <link href="media/title.png" rel="icon">
   <link href="media/apple-touch-icon.png" rel="apple-touch-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800&display=swap"
+    rel="stylesheet">
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <style>
-    .cert-main { padding: 120px 0 80px; min-height: 70vh; }
-    .cert-intro { max-width: 760px; margin: 0 auto 40px; text-align: center; color: #555; }
-    .cert-cards { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
-    .cert-card { display: flex; align-items: center; gap: 18px; padding: 22px 24px;
-      border: 1px solid #e6e6ee; border-radius: 14px; background: #fff; text-decoration: none;
-      transition: box-shadow .15s, border-color .15s, transform .15s; }
-    .cert-card:hover { border-color: #1b2c5c; box-shadow: 0 8px 24px rgba(27,44,92,.10);
-      transform: translateY(-2px); }
-    .cert-card-icon { flex: 0 0 auto; width: 54px; height: 54px; border-radius: 12px;
-      display: flex; align-items: center; justify-content: center; font-size: 1.7rem;
-      background: #eef0f7; color: #1b2c5c; }
-    .cert-card.online .cert-card-icon { background: #f2ecf5; color: #6a3a7a; }
-    .cert-card-body { flex: 1 1 auto; display: flex; flex-direction: column; }
-    .cert-card-title { font-weight: 700; color: #1b2c5c; font-size: 1.12rem; }
-    .cert-card-sub { color: #666; font-size: .92rem; margin-top: 2px; }
-    .cert-card-count { color: #9a9aa8; font-size: .8rem; margin-top: 4px; }
-    .cert-card-dl { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px;
-      background: #1b2c5c; color: #fff; padding: 10px 18px; border-radius: 24px;
-      font-weight: 600; font-size: .9rem; white-space: nowrap; }
-    .cert-card.online .cert-card-dl { background: #6a3a7a; }
-    .cert-tip { max-width: 720px; margin: 26px auto 0; text-align: center; color: #99a; font-size: .86rem; }
+    .cert-main {
+      padding: 120px 0 80px;
+      min-height: 70vh;
+    }
+
+    .cert-intro {
+      max-width: 760px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: #555;
+    }
+
+    .cert-cards {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cert-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 24px;
+      border: 1px solid #e6e6ee;
+      border-radius: 14px;
+      background: #fff;
+      text-decoration: none;
+      transition: box-shadow .15s, border-color .15s, transform .15s;
+    }
+
+    .cert-card:hover {
+      border-color: #1b2c5c;
+      box-shadow: 0 8px 24px rgba(27, 44, 92, .10);
+      transform: translateY(-2px);
+    }
+
+    .cert-card-icon {
+      flex: 0 0 auto;
+      width: 54px;
+      height: 54px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.7rem;
+      background: #eef0f7;
+      color: #1b2c5c;
+    }
+
+    .cert-card.online .cert-card-icon {
+      background: #f2ecf5;
+      color: #6a3a7a;
+    }
+
+    .cert-card-body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-card-title {
+      font-weight: 700;
+      color: #1b2c5c;
+      font-size: 1.12rem;
+    }
+
+    .cert-card-sub {
+      color: #666;
+      font-size: .92rem;
+      margin-top: 2px;
+    }
+
+    .cert-card-count {
+      color: #9a9aa8;
+      font-size: .8rem;
+      margin-top: 4px;
+    }
+
+    .cert-card-dl {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #1b2c5c;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: .9rem;
+      white-space: nowrap;
+    }
+
+    .cert-card.online .cert-card-dl {
+      background: #6a3a7a;
+    }
+
+    .cert-tip {
+      max-width: 720px;
+      margin: 26px auto 0;
+      text-align: center;
+      color: #99a;
+      font-size: .86rem;
+    }
+
     @media (max-width: 560px) {
-      .cert-card { flex-wrap: wrap; }
-      .cert-card-dl { width: 100%; justify-content: center; }
+      .cert-card {
+        flex-wrap: wrap;
+      }
+
+      .cert-card-dl {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Certificate Directory */
+    .certificate-directory {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Search box */
+    .certificate-search {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto 15px;
+    }
+
+    .certificate-search i {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      opacity: 0.55;
+    }
+
+    .certificate-search input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 18px 14px 48px;
+      border: 1px solid #d8dce3;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      background: #fff;
+      transition: all 0.2s ease;
+    }
+
+    .certificate-search input:focus {
+      border-color: #777;
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Count */
+    .certificate-result-count {
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    /* Grid */
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    /* Individual certificate */
+    .certificate-item {
+      display: flex;
+      align-items: center;
+      min-height: 64px;
+      padding: 10px 12px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s ease;
+    }
+
+    .certificate-item:hover {
+      transform: translateY(-2px);
+      border-color: #bbb;
+      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Number */
+    .certificate-number {
+      flex: 0 0 34px;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: #f1f3f5;
+      color: #555;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Name */
+    .certificate-name {
+      flex: 1;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    /* Download icon */
+    .certificate-download {
+      flex: 0 0 32px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 8px;
+      border-radius: 7px;
+      background: #f5f5f5;
+      color: #555;
+      font-size: 13px;
+    }
+
+    .certificate-item:hover .certificate-download {
+      background: #222;
+      color: #fff;
+    }
+
+    /* No results */
+    .no-results {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+      color: #777;
+    }
+
+    .no-results i {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .no-results p {
+      margin: 0;
+    }
+
+    /* Tablet */
+    @media (max-width: 850px) {
+      .certificate-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 560px) {
+      .certificate-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .certificate-name {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
+
 <body class="poster-page">
 
   <header id="header" class="header-solid">
     <div class="container">
       <div id="logo" class="pull-left">
-        <a href="index.html#intro"><img src="media/title_1.png" alt="GPMLFF Workshop" title=""></a>
+        <a href="index.html#intro"><img src="media/title.png" alt="D3Mat Workshop" title=""></a>
       </div>
       <nav class="poster-nav pull-right">
         <a href="index.html#intro">Home</a>
@@ -60,47 +308,253 @@
         <h2 class="text-center">Certificates</h2>
       </div>
       <p class="cert-intro">
-        Certificates for the 1<sup>st</sup> General-Purpose Machine-Learned Force Fields
-        in Theory and Practice Workshop (13&ndash;15 July 2026). Download the document for
-        your category below and open it to find your own certificate &mdash; there is one
-        per page, ordered alphabetically by name.
+        Certificates for the 1<sup>st</sup> edition of Digital Design and Discovery of Materials (D<sup>3</sup>Mat)
+        Workshop (25 September 2026).
       </p>
 
-      <div class="cert-cards">
-        <a class="cert-card" href="certificates/GPMLFF_Attendance_Certificates.pdf" target="_blank" rel="noopener" download>
-          <span class="cert-card-icon"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
-          <span class="cert-card-body">
-            <span class="cert-card-title">Attendance</span>
-            <span class="cert-card-sub">For all in-person participants</span>
-            <span class="cert-card-count">50 certificates &middot; one per page</span>
-          </span>
-          <span class="cert-card-dl"><i class="fa fa-download" aria-hidden="true"></i> Download</span>
-        </a>
-        <a class="cert-card" href="certificates/GPMLFF_Poster_Certificates_in-person.pdf" target="_blank" rel="noopener" download>
-          <span class="cert-card-icon"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
-          <span class="cert-card-body">
-            <span class="cert-card-title">Poster presentation · in person</span>
-            <span class="cert-card-sub">For in-person poster presenters</span>
-            <span class="cert-card-count">17 certificates &middot; one per page</span>
-          </span>
-          <span class="cert-card-dl"><i class="fa fa-download" aria-hidden="true"></i> Download</span>
-        </a>
-        <a class="cert-card online" href="certificates/GPMLFF_Poster_Certificates_online.pdf" target="_blank" rel="noopener" download>
-          <span class="cert-card-icon"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></span>
-          <span class="cert-card-body">
-            <span class="cert-card-title">Poster presentation · online</span>
-            <span class="cert-card-sub">For online poster presenters</span>
-            <span class="cert-card-count">5 certificates &middot; one per page</span>
-          </span>
-          <span class="cert-card-dl"><i class="fa fa-download" aria-hidden="true"></i> Download</span>
-        </a>
+      <div class="certificate-directory">
+
+        <!-- Search -->
+        <div class="certificate-search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="text" id="certificateSearch" placeholder="Search participant name..."
+            onkeyup="filterCertificates()" autocomplete="off">
+        </div>
+
+        <div class="certificate-result-count" id="certificateCount">
+          Showing 31 certificates
+        </div>
+
+        <!-- Certificate Grid -->
+        <div class="certificate-grid" id="certificateGrid">
+
+          <a class="certificate-item" href="certificates/01-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">01</span>
+            <span class="certificate-name">Mrs. Saravana Selvi S</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/02-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">02</span>
+            <span class="certificate-name">Dr. Kaviya Sri Mani</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/03-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">03</span>
+            <span class="certificate-name">Mr. Shane Christopher R</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/04-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">04</span>
+            <span class="certificate-name">Ms. Harini Gopalakrishnan</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/05-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">05</span>
+            <span class="certificate-name">Mrs. Ajantha A</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/06-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">06</span>
+            <span class="certificate-name">Ms. DEEPSHIKA R</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/07-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">07</span>
+            <span class="certificate-name">Dr. TONY DHIWAHAR</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/08-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">08</span>
+            <span class="certificate-name">Dr. Ramu A</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/09-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">09</span>
+            <span class="certificate-name">Mr. SUBHASH A</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/10-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">10</span>
+            <span class="certificate-name">Mrs. AJITHA E</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/11-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">11</span>
+            <span class="certificate-name">Dr. Sinthika S</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/12-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">12</span>
+            <span class="certificate-name">Mr. ROHITHKANNA V.P.</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/13-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">13</span>
+            <span class="certificate-name">Dr. Dhanalakshmi B</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/14-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">14</span>
+            <span class="certificate-name">Dr. Sakthiraj K</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/15-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">15</span>
+            <span class="certificate-name">Mr. Saran Velu</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/16-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">16</span>
+            <span class="certificate-name">Ms. Mithra K M</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/17-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">17</span>
+            <span class="certificate-name">Ms. S Sneha</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/18-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">18</span>
+            <span class="certificate-name">Ms. Assumptana Sirumalar A</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/19-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">19</span>
+            <span class="certificate-name">Dr. Jayakumar S</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/20-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">20</span>
+            <span class="certificate-name">Mr. Abhigyan Hazarika</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/21-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">21</span>
+            <span class="certificate-name">Mr. Omkar Sahu</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/22-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">22</span>
+            <span class="certificate-name">Dr. ASHITH V K</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/23-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">23</span>
+            <span class="certificate-name">Ms. Dazzle L</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/24-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">24</span>
+            <span class="certificate-name">Mr. Vishnu Vijay S R</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/25-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">25</span>
+            <span class="certificate-name">Mr. KALAISELVAN K</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/26-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">26</span>
+            <span class="certificate-name">Dr. MOHANKUMAR VVIJAYAN</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/27-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">27</span>
+            <span class="certificate-name">Ms. Harini G R</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/28-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">28</span>
+            <span class="certificate-name">Mr. Nithyasri N</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/29-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">29</span>
+            <span class="certificate-name">Dr. Chandra Devi K</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/30-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">30</span>
+            <span class="certificate-name">Mr. Shiva Subramani</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+          <a class="certificate-item" href="certificates/31-D3Mat-certificate.pdf" target="_blank" rel="noopener"
+            download>
+            <span class="certificate-number">31</span>
+            <span class="certificate-name">Ms. Blessy S</span>
+            <span class="certificate-download"><i class="fa fa-download"></i></span>
+          </a>
+
+        </div>
+
+        <div class="no-results" id="noCertificateResults">
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <p>No certificate found.</p>
+        </div>
+
       </div>
 
-      <p class="cert-tip">
-        <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-        Tip: open the PDF and press <strong>Ctrl</strong>/<strong>&#8984; Cmd</strong> + <strong>F</strong>
-        to jump straight to your name.
-      </p>
+
     </div>
   </main>
 
@@ -114,5 +568,48 @@
 
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function filterCertificates() {
+
+      const input = document.getElementById("certificateSearch");
+      const filter = input.value.toLowerCase().trim();
+
+      const items = document.querySelectorAll(".certificate-item");
+      const count = document.getElementById("certificateCount");
+      const noResults = document.getElementById("noCertificateResults");
+
+      let visible = 0;
+
+      items.forEach(function (item) {
+
+        const name = item
+          .querySelector(".certificate-name")
+          .textContent
+          .toLowerCase();
+
+        if (name.includes(filter)) {
+          item.style.display = "flex";
+          visible++;
+        } else {
+          item.style.display = "none";
+        }
+
+      });
+
+      if (filter === "") {
+        count.textContent = "Showing 31 certificates";
+      } else {
+        count.textContent =
+          "Showing " + visible + " certificate" + (visible !== 1 ? "s" : "");
+      }
+
+      if (visible === 0) {
+        noResults.style.display = "block";
+      } else {
+        noResults.style.display = "none";
+      }
+    }
+  </script>
 </body>
+
 </html>
